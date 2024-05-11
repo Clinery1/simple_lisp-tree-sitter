@@ -58,5 +58,9 @@
 ((ident) @operator (#eq? @operator "*"))
 ((ident) @operator (#eq? @operator "/"))
 ((ident) @operator (#eq? @operator "%"))
-((ident) @keyword (#eq? @keyword "and"))
-((ident) @keyword (#eq? @keyword "or"))
+
+((ident) @function.builtin (#eq? @function.builtin "and"))
+((ident) @function.builtin (#eq? @function.builtin "or"))
+
+((ident) @function.builtin (#eq? @function.builtin "list"))
+((ident) @function.builtin (#eq? @function.builtin "index"))
