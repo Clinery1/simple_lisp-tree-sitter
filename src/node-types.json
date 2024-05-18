@@ -23,6 +23,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -36,6 +44,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -59,6 +75,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -67,7 +87,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -90,9 +122,146 @@
     }
   },
   {
-    "type": "comment",
+    "type": "chain",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "begin",
+          "named": true
+        },
+        {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "cond",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "list",
+          "named": true
+        },
+        {
+          "type": "module",
+          "named": true
+        },
+        {
+          "type": "multifn",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
+          "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splat",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "char",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "commentText",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "cond",
@@ -126,6 +295,14 @@
             "named": true
           },
           {
+            "type": "chain",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
             "type": "comment",
             "named": true
           },
@@ -139,6 +316,14 @@
           },
           {
             "type": "defn",
+            "named": true
+          },
+          {
+            "type": "docComment",
+            "named": true
+          },
+          {
+            "type": "dotIdent",
             "named": true
           },
           {
@@ -162,6 +347,10 @@
             "named": true
           },
           {
+            "type": "module",
+            "named": true
+          },
+          {
             "type": "multifn",
             "named": true
           },
@@ -170,7 +359,19 @@
             "named": true
           },
           {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "path",
+            "named": true
+          },
+          {
             "type": "recur",
+            "named": true
+          },
+          {
+            "type": "replDirective",
             "named": true
           },
           {
@@ -201,6 +402,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -214,6 +423,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -237,6 +454,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -245,7 +466,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -280,6 +513,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -293,6 +534,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -316,6 +565,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -324,7 +577,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -370,6 +635,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -383,6 +656,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -406,6 +687,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -414,7 +699,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -460,6 +757,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -473,6 +778,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -496,6 +809,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -504,7 +821,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -529,6 +858,21 @@
         },
         {
           "type": "vector",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "docComment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "commentText",
           "named": true
         }
       ]
@@ -547,6 +891,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -560,6 +912,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -583,6 +943,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -591,7 +955,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -622,6 +998,11 @@
     }
   },
   {
+    "type": "ident",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "list",
     "named": true,
     "fields": {
@@ -631,6 +1012,14 @@
         "types": [
           {
             "type": "begin",
+            "named": true
+          },
+          {
+            "type": "chain",
+            "named": true
+          },
+          {
+            "type": "char",
             "named": true
           },
           {
@@ -647,6 +1036,14 @@
           },
           {
             "type": "defn",
+            "named": true
+          },
+          {
+            "type": "docComment",
+            "named": true
+          },
+          {
+            "type": "dotIdent",
             "named": true
           },
           {
@@ -670,6 +1067,10 @@
             "named": true
           },
           {
+            "type": "module",
+            "named": true
+          },
+          {
             "type": "multifn",
             "named": true
           },
@@ -678,7 +1079,19 @@
             "named": true
           },
           {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "path",
+            "named": true
+          },
+          {
             "type": "recur",
+            "named": true
+          },
+          {
+            "type": "replDirective",
             "named": true
           },
           {
@@ -709,6 +1122,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -722,6 +1143,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -745,6 +1174,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -753,7 +1186,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -770,6 +1215,21 @@
         },
         {
           "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
           "named": true
         }
       ]
@@ -803,6 +1263,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -816,6 +1284,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -839,6 +1315,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -847,7 +1327,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -874,26 +1366,23 @@
     }
   },
   {
-    "type": "set",
+    "type": "object",
     "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
           "type": "begin",
+          "named": true
+        },
+        {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
           "named": true
         },
         {
@@ -910,6 +1399,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -933,6 +1430,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -941,7 +1442,176 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splat",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "path",
+    "named": true,
+    "fields": {
+      "first": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "pathField",
+          "named": true
+        },
+        {
+          "type": "pathSeparator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pathField",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "set",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "begin",
+          "named": true
+        },
+        {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "cond",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "list",
+          "named": true
+        },
+        {
+          "type": "module",
+          "named": true
+        },
+        {
+          "type": "multifn",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
+          "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -976,6 +1646,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -989,6 +1667,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -1012,6 +1698,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -1020,7 +1710,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -1055,6 +1757,14 @@
           "named": true
         },
         {
+          "type": "chain",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -1068,6 +1778,14 @@
         },
         {
           "type": "defn",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "dotIdent",
           "named": true
         },
         {
@@ -1091,6 +1809,10 @@
           "named": true
         },
         {
+          "type": "module",
+          "named": true
+        },
+        {
           "type": "multifn",
           "named": true
         },
@@ -1099,7 +1821,19 @@
           "named": true
         },
         {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "recur",
+          "named": true
+        },
+        {
+          "type": "replDirective",
           "named": true
         },
         {
@@ -1183,7 +1917,23 @@
     "named": false
   },
   {
+    "type": ";;",
+    "named": false
+  },
+  {
     "type": "[",
+    "named": false
+  },
+  {
+    "type": "\\newline",
+    "named": false
+  },
+  {
+    "type": "\\space",
+    "named": false
+  },
+  {
+    "type": "\\tab",
     "named": false
   },
   {
@@ -1193,6 +1943,14 @@
   {
     "type": "begin",
     "named": false
+  },
+  {
+    "type": "chain",
+    "named": false
+  },
+  {
+    "type": "commentText",
+    "named": true
   },
   {
     "type": "cond",
@@ -1205,6 +1963,10 @@
   {
     "type": "defn",
     "named": false
+  },
+  {
+    "type": "dotIdent",
+    "named": true
   },
   {
     "type": "else",
@@ -1223,15 +1985,27 @@
     "named": false
   },
   {
-    "type": "ident",
-    "named": true
+    "type": "module",
+    "named": false
   },
   {
     "type": "number",
     "named": true
   },
   {
+    "type": "object",
+    "named": false
+  },
+  {
+    "type": "pathSeparator",
+    "named": true
+  },
+  {
     "type": "recur",
+    "named": true
+  },
+  {
+    "type": "replDirective",
     "named": true
   },
   {

@@ -13,6 +13,7 @@ module.exports = grammar({
 
             // language items
             prec(2, choice(
+                $.object,
                 $.begin,
                 $.defn,
                 $.fn,
@@ -20,22 +21,47 @@ module.exports = grammar({
                 $.cond,
                 $.def,
                 $.set,
+                $.chain,
+                $.module,
             )),
 
             // terminals
             prec(3, choice(
+                $.char,
                 $.string,
                 $.number,
                 $.ident,
+                $.dotIdent,
                 $.float,
                 $.comment,
+                $.docComment,
                 $.true,
                 $.false,
                 $.recur,
+                $.path,
+                $.replDirective,
             )),
         ),
 
         recur: $=>"recur",
+
+        module: $=>seq(
+            "(",
+            "module",
+            $.ident,
+            ")",
+        ),
+
+        chain: $=>seq(
+            "(",
+            "chain",
+            "(",
+            field("name", $.ident),
+            $._expr,
+            ")",
+            repeat($._expr),
+            ")",
+        ),
 
         list: $=>choice(
             seq(
@@ -49,6 +75,22 @@ module.exports = grammar({
         splat: $=>seq(
             "...",
             $._expr,
+        ),
+
+        object: $=>seq(
+            "(",
+            "object",
+            repeat($._objectInner),
+            ")",
+        ),
+        _objectInner: $=>choice(
+            seq(
+                "(",
+                $.dotIdent,
+                $._expr,
+                ")",
+            ),
+            $.dotIdent,
         ),
 
         begin: $=>seq(
@@ -133,9 +175,28 @@ module.exports = grammar({
         ),
 
         // fundamental tokens
-        ident: $=>/[^ \t\r\n()\[\]{}"'`~#0-9][^ .\t\r\n()\[\]{}"]*/,
+        path: $=>seq(
+            field("first", $.ident),
+            repeat1(seq(
+                $.pathSeparator,
+                $.pathField,
+            )),
+        ),
+        pathSeparator: $=>token.immediate("/"),
+        pathField: $=>$._identImmediate,
+        dotIdent: $=>/\.[^ .\t\r\n()\[\]{}"]+/,
+        ident: $=>$._ident,
+        _ident: $=>/[^\/:;\\\\ .\t\r\n()\\[\\]{}\"'#0-9][^/ .\t\r\n()\\[\\]{}\"]*/,
+        _identImmediate: $=>token.immediate(/[^\/:;\\\\ .\t\r\n()\\[\\]{}\"'#0-9][^/ .\t\r\n()\\[\\]{}\"]*/),
+        replDirective: $=>/:[^ .\t\r\n()\\[\\]{}\"]*/,
         number: $=>/[0-9][0-9_]*/,
         float: $=>/[0-9][0-9_]*\.[0-9][0-9_]*/,
+        char: $=>choice(
+            "\\space",
+            "\\newline",
+            "\\tab",
+            /\\./,
+        ),
         string: $=>seq(
             '"',
             repeat(choice(
@@ -147,6 +208,8 @@ module.exports = grammar({
         string_escape: $=>/\\["\\trn0]/,
         true: $=>"#t",
         false: $=>"#f",
-        comment: $=>prec(10000, /;[^\n]*/),
+        docComment: $=>prec(20000, seq(";;", $.commentText)),
+        comment: $=>prec(10000, seq(/;[^;\n]?/, $.commentText)),
+        commentText: $=>/[^\n]*/,
     }
 });

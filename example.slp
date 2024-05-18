@@ -1,6 +1,12 @@
+; TODO:
+;; # Markdown enabled doc comments!
 (defn println
     ([& args] (print ...args "\n"))
     ([] (print "\n")))
+
+(object
+    (.$ wasd)
+    (.ident wasd))
 
 
 (defn fib
@@ -26,6 +32,7 @@
                     (else (println i)))
                 (recur max (+ 1 i)))))))
 
-
 (fizzBuzz 30)
 (println (fib 19))
+
+path/to/thing
