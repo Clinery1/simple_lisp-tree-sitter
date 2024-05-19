@@ -130,7 +130,7 @@
         "required": true,
         "types": [
           {
-            "type": "ident",
+            "type": "varName",
             "named": true
           }
         ]
@@ -620,7 +620,7 @@
         "required": true,
         "types": [
           {
-            "type": "ident",
+            "type": "varName",
             "named": true
           }
         ]
@@ -742,7 +742,7 @@
         "required": true,
         "types": [
           {
-            "type": "ident",
+            "type": "funcName",
             "named": true
           }
         ]
@@ -996,6 +996,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "funcName",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "ident",
@@ -1477,6 +1482,11 @@
     }
   },
   {
+    "type": "paramName",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "path",
     "named": true,
     "fields": {
@@ -1520,7 +1530,7 @@
         "required": true,
         "types": [
           {
-            "type": "ident",
+            "type": "varName",
             "named": true
           }
         ]
@@ -1864,7 +1874,7 @@
       "required": false,
       "types": [
         {
-          "type": "ident",
+          "type": "varName",
           "named": true
         }
       ]
@@ -1886,6 +1896,11 @@
     }
   },
   {
+    "type": "varName",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "vector",
     "named": true,
     "fields": {},
@@ -1894,7 +1909,7 @@
       "required": false,
       "types": [
         {
-          "type": "ident",
+          "type": "paramName",
           "named": true
         }
       ]
@@ -1902,6 +1917,10 @@
   },
   {
     "type": "\"",
+    "named": false
+  },
+  {
+    "type": "&",
     "named": false
   },
   {

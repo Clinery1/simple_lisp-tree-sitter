@@ -185,7 +185,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "ident"
+            "name": "varName"
           }
         },
         {
@@ -366,7 +366,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "ident"
+            "name": "funcName"
           }
         },
         {
@@ -581,7 +581,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "ident"
+            "name": "varName"
           }
         },
         {
@@ -610,7 +610,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "ident"
+            "name": "varName"
           }
         },
         {
@@ -633,8 +633,17 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "SYMBOL",
-            "name": "ident"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "&"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "paramName"
+              }
+            ]
           }
         },
         {
@@ -654,7 +663,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "ident"
+            "name": "varName"
           }
         },
         {
@@ -711,20 +720,32 @@
       "type": "SYMBOL",
       "name": "_ident"
     },
+    "varName": {
+      "type": "SYMBOL",
+      "name": "_ident"
+    },
+    "paramName": {
+      "type": "SYMBOL",
+      "name": "_ident"
+    },
+    "funcName": {
+      "type": "SYMBOL",
+      "name": "_ident"
+    },
     "_ident": {
       "type": "PATTERN",
-      "value": "[^\\/:;\\\\\\\\ .\\t\\r\\n()\\\\[\\\\]{}\\\"'#0-9][^/ .\\t\\r\\n()\\\\[\\\\]{}\\\"]*"
+      "value": "[^\\/\\:\\;\\\\ \\.\\t\\r\\n()\\[\\]\\{\\}\\\"\\'\\#0-9][^\\/ \\.\\t\\r\\n\\(\\)\\[\\]\\{\\}\\\"]*"
     },
     "_identImmediate": {
       "type": "IMMEDIATE_TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "[^\\/:;\\\\\\\\ .\\t\\r\\n()\\\\[\\\\]{}\\\"'#0-9][^/ .\\t\\r\\n()\\\\[\\\\]{}\\\"]*"
+        "value": "[^\\/\\:\\;\\\\ \\.\\t\\r\\n()\\[\\]\\{\\}\\\"\\'\\#0-9][^\\/ \\.\\t\\r\\n\\(\\)\\[\\]\\{\\}\\\"]*"
       }
     },
     "replDirective": {
       "type": "PATTERN",
-      "value": ":[^ .\\t\\r\\n()\\\\[\\\\]{}\\\"]*"
+      "value": ":[^ \\.\\t\\r\\n\\(\\)\\[\\]\\{\\}\\\"]*"
     },
     "number": {
       "type": "PATTERN",

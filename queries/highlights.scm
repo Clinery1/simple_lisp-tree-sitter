@@ -8,15 +8,15 @@
 "chain"   @keyword
 "module"  @keyword.import
 
-(true)  @boolean
-(false)  @boolean
+(true)    @boolean
+(false)   @boolean
 
-"("   @punctuation.bracket
-")"   @punctuation.bracket
-"["   @punctuation.bracket
-"]"   @punctuation.bracket
-"{"   @punctuation.bracket
-"}"   @punctuation.bracket
+"("       @punctuation.bracket
+")"       @punctuation.bracket
+"["       @punctuation.bracket
+"]"       @punctuation.bracket
+"{"       @punctuation.bracket
+"}"       @punctuation.bracket
 
 (ident) @variable
 (dotIdent) @variable.member
@@ -35,30 +35,30 @@
 (module (ident) @module)
 
 (defn
-  name: (ident) @function.definition)
+  name: (funcName) @function.definition)
 (def
-  name: (ident) @variable.definition)
+  name: (varName) @variable.definition)
 (set
-  name: (ident) @variable)
+  name: (varName) @variable)
 (cond_else
   "else" @keyword.conditional)
 (chain
-  name: (ident) @variable.definition)
+  name: (varName) @variable.definition)
 
 (list
   first: (ident) @function.call)
 (object
   (dotIdent) @variable.member.definition)
 (path
-  (pathSeparator) @punctuation)
+  (pathSeparator) @punctuation.delimiter)
 (pathField) @variable.member
 
 (squiggle
-  (ident) @variable.parameter)
+  (varName) @variable.parameter)
 (vector
-  (ident) @variable.parameter)
+  (paramName) @variable.parameter)
 (vector
-  ((ident) @punctuation (#eq? @punctuation "&")))
+  ("&" @punctuation))
 
 ((dotIdent) @punctuation.special (#eq? @punctuation.special ".$"))
 
